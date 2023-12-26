@@ -34,7 +34,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ["mb2test.herokuapp.com", "localhost", '127.0.0.1']
+ALLOWED_HOSTS = ["mb2test.herokuapp.com", "localhost", '127.0.0.1','.herokuapp.com']
 
 # Application definition
 
@@ -112,7 +112,9 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 #     }
 # }
 
-DATABASES = 'postgres://zjtzswux:75oKqB0V5GVc2Ce0k_-sgfJiXu_2s6FS@flora.db.elephantsql.com/zjtzswux'
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
 
 
 # Password validation
