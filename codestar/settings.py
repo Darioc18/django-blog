@@ -112,9 +112,7 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-}
+DATABASES = 'postgres://zjtzswux:75oKqB0V5GVc2Ce0k_-sgfJiXu_2s6FS@flora.db.elephantsql.com/zjtzswux'
 
 
 # Password validation
